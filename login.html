@@ -14,17 +14,46 @@
                 <a href="./index.html">Home</a>
                 <a href="./play.html">Play</a>
                 <a href="./leaderboards.html">Leaderboards</a>
-                <a href="./login.html">Login</a>
+                <a href="./login.html">Login/Register</a>
             </div>
         </nav>
     </header>
     <div class="content">
-        
+        <div class="loginPage">
+            <div id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <input type="email" name="loginEmail" id="loginEmail">
+                <label for="loginPassword">Password:</label>
+                <input type="password" name="loginPassword" id="loginPassword">
+                <div class="btnContainer">
+                    <button class="login">Login</button>
+                    <button id="showRegisterForm">Register</button>
+                </div>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <div id="column1">
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" name="registerEmail" id="registerEmail">
+                    <label for="registerUsername">Username:</label>
+                    <input type="text" name="registerUsername" id="registerUsername">
+                </div>
+                <div id="column2">
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" name="registerPassword" id="registerPassword">
+                    <label for="registerPassword">Confirm Password:</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword">
+                </div>
+                <div class="btnContainer">
+                    <button class="register">Register</button>
+                    <button id="showLoginForm">Login</button>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <p>Created by: Linus</p>
     </footer>
-    <script href="./Scripts/script.js/"></script>
+    <script src="./Scripts/script.js"></script>
 </body>
 </html>
 
