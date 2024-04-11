@@ -9,9 +9,13 @@ header {
     background-color: #444444;
     margin: 0;
     box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
-h1 {
-    font-size: 40px;
+h1{
+    font-size: 30px;
     background-color: #00FF00;
     font-weight: bolder;
     position: relative;
@@ -35,11 +39,17 @@ h1:hover{
     background-position: -120% 0;
 }
 .title{
-    padding: 0;
     transition: transform 0.3s ease-in-out;
 }
 .title:hover{
     transform: scale(1.2);
+}
+.titleBackground{
+    background-color: gray;
+    width: 20%;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 nav{
     display: flex;
@@ -55,7 +65,7 @@ nav{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: gray;
+    background-color: rgb(134, 129, 129);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +85,7 @@ nav{
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    background-color: darkgray;
+    background-color: rgb(134, 129, 129);
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1); 
 }
 .mainmenu a:active {
@@ -303,7 +313,7 @@ img{
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2); 
 }
 .moveList{
-    background-color: gray;
+    background-color: rgb(134, 129, 129);
     margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -316,7 +326,7 @@ img{
 }
 
 .moveList button{
-    background-color: darkgray;
+    background-color: gray;
     color: #00FF00;
     font-weight: bold;
     border: none;
@@ -330,4 +340,63 @@ img{
     transform: translateY(4px);
 }
 
+#Leaderboard{
+    background-color: transparent;
+    font-size: 30px;
+    margin-top: 0;
+    padding: 0;
+    display: grid;
+    color: #00FF00;
+    text-decoration: underline;
+}
+
+
+.leaderboardsTable{
+    background-color: darkgray;
+    width: 95%;
+    height: 90%;
+    border-radius: 10px;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+.leaderboardsBackground{
+    background-color: gray;
+    width: 80%;
+    height: 80vh;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px;
+    padding: 5px;
+    color: #00FF00;
+    font-weight: bold;
+    font-size: 20px;
+}
+th{
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+tr{
+    border-bottom: 1px solid #00FF00;
+    padding: 10px;
+}
+
+table tr td:nth-child(2),
+table tr td:nth-child(3) {
+    text-align: center;
+}
 
