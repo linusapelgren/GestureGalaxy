@@ -14,15 +14,30 @@
                 <a href="./index.html">Home</a>
                 <a href="./play.html">Play</a>
                 <a href="./leaderboards.html">Leaderboards</a>
-                <a href="./login.html">Login</a>
+                <a href="./login.html">Login/Register</a>
             </div>
         </nav>
     </header>
-    <div class="content">
+    <div class="content" id="gamePage">
+        <div class="gameWindowBorder">
+            <div class="gameWindow">
+                <div class="screenOverlay">
+                    <div class="opponentHand"><img src="./Assets/Screenshots/Rock.png" alt="Rock hand sign"></div>
+                    <div class="playerHand"><img src="./Assets/Screenshots/Rock.png" alt="Rock hand sign"></div>
+                </div>
+            </div>
+        </div>
+        <span class="moveList">
+            <button id="Rock">Rock</button>
+            <button id="Paper">Paper</button>
+            <button id="Scissors">Scissors</button>
+            <button id="Lizard">Lizard</button>
+            <button id="Spock">Spock</button>
+        </span>
     </div>
-    <footer>
+    <footer id="gameFooter">
         <p>Created by: Linus</p>
     </footer>
-    <script href="./Scripts/script.js/"></script>
+    <script href="./Scripts/game.js"></script>
 </body>
 </html>
