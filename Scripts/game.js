@@ -4,6 +4,7 @@ let gameScreen = document.querySelector('.gameWindow');
 
 // Get game music
 let gameMusic = new Audio('./Assets/Sound/GameMusic.mp3');
+let winSound = new Audio('./Assets/Sound/yay.mp3');
 //Get start button
 let startButton = document.querySelector('#startGame');
 // Add a click event listener to the start button
@@ -105,6 +106,7 @@ buttons.forEach(button => {
         if (scores.player === 3 || scores.computer === 3) {
             // Pause the game music
             gameMusic.pause();
+            winSound.play();
 
             // Update the result to show who won the game
             if (scores.player === 3) {
@@ -112,6 +114,7 @@ buttons.forEach(button => {
             } else {
                 resultElement.textContent = 'Computer wins the game!';
             }
+
 
             // Clear the game screen and show the start screen after a delay
             setTimeout(function() {
@@ -128,7 +131,7 @@ buttons.forEach(button => {
                 // Reset the player and opponent hand images
                 playerHandImg.src = "./Assets/Screenshots/Moves/emptyhand.png";
                 opponentHandImg.src = "./Assets/Screenshots/Moves/emptyhand.png";
-            }, 2000); // 2000 milliseconds = 2 seconds
+            }, 3500); // 3500 milliseconds = 3.5 seconds
         }
     });
 });
@@ -143,6 +146,7 @@ restartButton.addEventListener('click', function() {
     startScreen.style.display = 'none';
     gameScreen.style.display = 'block';
     gameMusic.loop = true;
+    gameMusic.currentTime = 0;
     gameMusic.play();
     gameMusic.volume = 0.5;
     restartButton.style.display = 'none';
