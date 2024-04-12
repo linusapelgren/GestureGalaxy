@@ -21,18 +21,24 @@
         </nav>
     </header>
     <div class="content" id="gamePage">
-        <div class="startGameWindowBorder">
+        <div class="gameWindowBorder">
             <div class="startGameWindow">
                 <div class="startScreenOverlay">
-                    <button id="pressToStart">Press to start!</button>
+                    <button id="startGame">Press to start!</button>
+                    <button id="restartGame">Play Again?</button>
                 </div>
             </div>
-        </div>
-        <div class="gameWindowBorder">
             <div class="gameWindow">
                 <div class="screenOverlay">
-                    <div class="opponentHand"><img src="./Assets/Screenshots/Rock.png" alt="Rock hand sign"></div>
-                    <div class="playerHand"><img src="./Assets/Screenshots/Rock.png" alt="Rock hand sign"></div>
+                    <div id="topContainer">
+                        <span id="scoreboard">
+                            <span id="playerScore">Player: 0</span>
+                            <span id="opponentScore">Computer: 0</span>
+                        </span>
+                        <p id="move">Make a move!</p>
+                    </div>
+                    <div class="opponentHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div>
+                    <div class="playerHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div>
                 </div>
             </div>
         </div>
