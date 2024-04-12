@@ -236,25 +236,13 @@ input{
     height: 80vh;
     border-radius: 10px;
     margin: auto;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-}
-.startGameWindowBorder{
-    background-color: gray;
-    width: 80%;
-    height: 80vh;
-    border-radius: 10px;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
-.playerHand{
+
+.playerHandImg{
     z-index: 2;
     border: black 2px solid;
     border-radius: 5px;
@@ -262,8 +250,10 @@ input{
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: white;
+    position: absolute;
+    right: 0;
 }
-.opponentHand{
+.opponentHandImg{
     z-index: 2;
     border: black 2px solid;
     border-radius: 5px;
@@ -274,7 +264,7 @@ input{
 }
 img{
     width: 100px;
-    height: 100px;
+    height: 120px;
     margin: 10px;
     cursor: pointer;
 }
@@ -282,11 +272,23 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: calc(100vh -40px);
     z-index: 0;
 }
 
-.gameWindow, .startGameWindow{
+.gameWindow{
+    background-color: white;
+    width:95%;
+    height: 90%;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 1;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.startGameWindow{
     background-color: white;
     width:95%;
     height: 90%;
@@ -297,7 +299,6 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-
 #gameFooter{
     padding: 10px;
     background-color: #444444;
@@ -318,6 +319,7 @@ img{
     height: 100%;
     border-radius: 10px;
     margin: auto;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -335,7 +337,7 @@ img{
     align-items: center;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2); 
 }
-.startScreenOverlay  #pressToStart{
+.startScreenOverlay  #startGame{
     background-color: transparent; 
     color: #00FF00;
     font-weight: bold;
@@ -360,6 +362,7 @@ img{
     width: 40%;
     border-radius: 10px;
     display: flex;
+    z-index: 1;
     justify-content: center;
     gap: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
@@ -439,4 +442,70 @@ table tr td:nth-child(2),
 table tr td:nth-child(3) {
     text-align: center;
 }
+#move{
+    font-size: 20px;
+    font-weight: bold;
+    color: #00FF00;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+
+.screenOverlay #topContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#topContainer span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #00FF00;
+}
+
+#topContainer #scoreboard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    flex-direction: row-reverse;
+}
+
+#playerScore, #opponentScore{
+    font-size: x-large;
+    margin: 10px;
+}
+#result {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #00FF00;
+    text-align: center;
+}
+
+#restartGame{
+    display: none;
+    position: absolute; 
+    top: 65%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: transparent; 
+    color: #00FF00;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: x-large;
+    animation: blink 1.5s linear infinite;
+    z-index: 100;
+}
