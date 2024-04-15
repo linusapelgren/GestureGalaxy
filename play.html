@@ -16,7 +16,7 @@
                 <a href="./index.html">Home</a>
                 <a href="./play.html">Play</a>
                 <a href="./leaderboards.html">Leaderboards</a>
-                <a href="./login.html">Login/Register</a>
+                <a href="./login.html" id="loginregister">Login/Register</a>
             </div>
         </nav>
     </header>
@@ -55,5 +55,14 @@
         <p>Created by: Linus</p>
     </footer>
     <script src="./Scripts/game.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let loginregisterBtn = document.getElementById('loginregister');
+            let loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                loginregisterBtn.textContent = loggedInUser;
+            }
+        });
+    </script>
 </body>
 </html>
