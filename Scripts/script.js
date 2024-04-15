@@ -51,19 +51,24 @@ function addMember(event) {
     loginForm.style.display = 'block';
 }
 
+let loginregisterBtn = document.getElementById('loginregister');
+
 function loginUser(event) {
     event.preventDefault();
-    let username = document.getElementById('loginUsername').value;
+    let email = document.getElementById('loginEmail').value;
     let password = document.getElementById('loginPassword').value;
+    let errorMessage = document.getElementById('errorMessage');
 
-    let index = membersName.indexOf(username);
+    let index = membersEmail.indexOf(email);
     if (index !== -1 && membersPassword[index] === password) {
         console.log('Logged in successfully');
+        localStorage.setItem('loggedInUser', membersName[index]); 
+        window.location.href = "index.html"; 
     } else {
-        console.log('Invalid username or password');
+        errorMessage.textContent = 'Invalid email or password'; 
     }
-
-    document.getElementById('loginUsername').value = '';
+    console.log('Registered accounts:', membersName, membersPassword, membersEmail); 
+    document.getElementById('loginEmail').value = '';
     document.getElementById('loginPassword').value = '';
 }
 });
