@@ -237,6 +237,7 @@ input{
     border-radius: 10px;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
@@ -366,7 +367,7 @@ img{
 }
 .moveList{
     background-color: rgb(134, 129, 129);
-    margin-top: 20px;
+    margin: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 40%;
@@ -377,6 +378,8 @@ img{
     gap: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
+
+
 
 .moveList button{
     background-color: gray;
@@ -518,4 +521,43 @@ table tr td:nth-child(3) {
     font-size: x-large;
     animation: blink 1.5s linear infinite;
     z-index: 100;
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade {
+    animation: fade 1s ease-in-out 3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: gray; /* Change this to the background color of your main menu */
+    min-width: 120px;
+    border-radius: 10px;
+    z-index: 0;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: #00FF00; 
+    text-decoration: none;
+    display: block;
+    font-size: 20px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    background-color: gray; /* Change this to the background color of your main menu items */
+}
+
+.dropdown:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.dropdown:active .dropdown-content {
+    display: block;
 }
