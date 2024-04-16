@@ -38,12 +38,7 @@ h1{
 h1:hover{
     background-position: -120% 0;
 }
-.title{
-    transition: transform 0.3s ease-in-out;
-}
-.title:hover{
-    transform: scale(1.2);
-}
+
 .titleBackground{
     background-color: gray;
     width: fit-content;
