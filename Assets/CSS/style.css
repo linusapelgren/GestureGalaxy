@@ -308,7 +308,7 @@ img{
     align-items: center;
     position: relative;
 }
-#gameFooter{
+#footer{
     padding: 10px;
     background-color: #444444;
     color: #00FF00;
@@ -530,4 +530,10 @@ table tr td:nth-child(3) {
 
 #mute{
     color: #00FF00;
+}
+
+
+#ruleset{
+    width: 40%;
+    height: auto;
 }
