@@ -17,6 +17,12 @@
                 <a href="./play.html">Play</a>
                 <a href="./leaderboards.html">Leaderboards</a>
                 <a href="./login.html" id="loginregister">Login/Register</a>
+                <div id="dropdown" class="dropdown">
+                    <a id="dropdownBtn" class="dropbtn"></a>
+                    <div id="dropdownContent" class="dropdown-content">
+                        <a id="logoutBtn">Logout</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header> 
@@ -38,63 +44,5 @@
         <p>Created by: Linus</p>
     </footer>
     <script src="./Scripts/leaderboards.js/"></script>
-    <!--
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let loginregisterBtn = document.getElementById('loginregister');
-            let loggedInUser = localStorage.getItem('loggedInUser');
-            if (loggedInUser) {
-                loginregisterBtn.textContent = loggedInUser;
-            }
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let loginregisterBtn = document.getElementById('loginregister');
-            let loggedInUser = localStorage.getItem('loggedInUser');
-            if (loggedInUser) {
-                // Create a dropdown menu
-                let dropdown = document.createElement('div');
-                dropdown.className = 'dropdown';
-    
-                // Create the dropdown content container
-                let dropdownContent = document.createElement('div');
-                dropdownContent.className = 'dropdown-content';
-    
-                // Create the button that triggers the dropdown
-                let dropdownBtn = document.createElement('a');
-                dropdownBtn.className = 'dropbtn';
-                dropdownBtn.textContent = loggedInUser;
-                dropdownBtn.onclick = function(event) { // Add an onclick event to show the dropdown content
-                    event.stopPropagation();
-                    dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
-                };
-    
-                // Create the logout button
-                let logoutBtn = document.createElement('a');
-                logoutBtn.textContent = 'Logout';
-                logoutBtn.href = '#';
-                logoutBtn.addEventListener('click', function(event) {
-                    event.stopPropagation(); // Stop the event propagation
-                    localStorage.removeItem('loggedInUser'); // remove the user from localStorage
-                    window.location.href = "login.html"; // redirect to the login page
-                });
-    
-                // Append the elements to the dropdown
-                dropdownContent.appendChild(logoutBtn);
-                dropdown.appendChild(dropdownBtn);
-                dropdown.appendChild(dropdownContent);
-    
-                // Replace the login/register button with the dropdown
-                loginregisterBtn.parentNode.replaceChild(dropdown, loginregisterBtn);
-    
-                // Add an event listener to the document to hide the dropdown content when clicking outside of it
-                document.addEventListener('click', function() {
-                    dropdownContent.style.display = 'none';
-                });
-            }
-        });
-    </script>
-    -->
 </body>
 </html>

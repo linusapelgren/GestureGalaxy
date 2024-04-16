@@ -71,4 +71,37 @@ function loginUser(event) {
     document.getElementById('loginEmail').value = '';
     document.getElementById('loginPassword').value = '';
 }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let loginregisterBtn = document.getElementById('loginregister'); // Get the login/register button
+        let loggedInUser = localStorage.getItem('loggedInUser'); // Get the logged in user from localStorage
+        if (loggedInUser) {
+            loginregisterBtn.textContent = loggedInUser; // Change the text of the button to the logged in users username
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let dropdown = document.getElementById('dropdown');
+        let dropdownBtn = document.getElementById('dropdownBtn');
+        let dropdownContent = document.getElementById('dropdownContent');
+        let logoutBtn = document.getElementById('logoutBtn');
+    
+        let loggedInUser = localStorage.getItem('loggedInUser');
+        if (loggedInUser) {
+            dropdownBtn.textContent = loggedInUser;
+    
+            dropdownBtn.onclick = function(event) {
+                event.stopPropagation();
+                dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
+            };
+    
+            logoutBtn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                localStorage.removeItem('loggedInUser');
+                window.location.href = "login.html";
+            });
+        } else {
+            dropdown.style.display = 'none';
+        }
+    });
 });
