@@ -50,6 +50,7 @@ h1:hover{
     margin: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 0px 20px;
 }
 nav{
     display: flex;
@@ -232,8 +233,8 @@ input{
 
 .gameWindowBorder{
     background-color: gray;
-    width: 80%;
-    height: 80vh;
+    width: 60%;
+    height: 70vh;
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -350,7 +351,7 @@ img{
 }
 .startScreenOverlay  #startGame{
     background-color: transparent; 
-    color: #00FF00;
+    color: lightgreen;
     font-weight: bold;
     border: none;
     border-radius: 10px;
@@ -368,9 +369,8 @@ img{
 .moveList{
     background-color: rgb(134, 129, 129);
     margin: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 40%;
+    padding: 10px 20px;
+    width: fit-content;
     border-radius: 10px;
     display: flex;
     z-index: 1;
@@ -512,7 +512,7 @@ table tr td:nth-child(3) {
     left: 50%; 
     transform: translate(-50%, -50%); 
     background-color: transparent; 
-    color: #00FF00;
+    color: lightgreen;
     font-weight: bold;
     border: none;
     border-radius: 10px;
@@ -530,44 +530,9 @@ table tr td:nth-child(3) {
 }
 
 .fade {
-    animation: fade 1s ease-in-out 3;
+    animation: fade 0.5s ease-in-out 3;
 }
 
-.dropdown {
-    position: relative;
-    display: none;
-    background-color: gray;
-    border-radius: 10px;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: gray; 
-    min-width: 120px;
-    border-radius: 10px;
-    z-index: 0;
-    margin-top: 10px;
-}
-
-.dropdown-content a {
-    color: #00FF00; 
-    text-decoration: none;
-    display: block;
-    font-size: 20px; 
-    font-weight: bold; 
-    cursor: pointer; 
-    background-color: gray;
-}
-
-.dropdown:active {
-    box-shadow: none;
-    transform: translateY(4px);
-}
-
-.dropdown:active .dropdown-content {
-    display: block;
-}
-
-#loginregister, #dropdown {
-    display: none;
+#mute{
+    color: #00FF00;
 }
