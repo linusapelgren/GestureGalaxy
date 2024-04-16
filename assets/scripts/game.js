@@ -46,7 +46,7 @@ function onStartBtnClick() {
     gameScreen.style.display = 'block';
     gameMusic.loop = true;
     gameMusic.play();
-    gameMusic.volume = 0.5;
+    gameMusic.volume = 0.2;
 }
 
 // Function to get the computer's choice
@@ -93,6 +93,10 @@ function onWeaponBtnClick() {
     }
 
     isWeaponClickDisabled = true;
+
+    let move = document.getElementById('move');
+    move.textContent = "Move in progress..."
+
     // Get the player's hand and the opponent's hand images
     let playerHandImg = document.querySelector('.playerHandImg img');
     let opponentHandImg = document.querySelector('.opponentHandImg img');
@@ -141,13 +145,13 @@ function onWeaponBtnClick() {
         // Play the round win sound if the player or the computer wins the round
         let roundWin = new Audio('./assets/Sound/roundWin.mp3');
         if ((playerWon && scores.player < 3) || (!playerWon && scores.computer < 3)) {
-            gameMusic.volume = 0.2; // Lower the volume of the game music;
+            gameMusic.volume = 0.1; // Lower the volume of the game music;
             roundWin.play();
 
             // Resume the game music when the round win sound has finished playing
             roundWin.onloadedmetadata = function() {
                 setTimeout(function() {
-                    gameMusic.volume = 0.5; // Reset the volume of the game music
+                    gameMusic.volume = 0.2; // Reset the volume of the game music
                 }, roundWin.duration * 1000); // roundWin.duration is in seconds, so multiply by 1000 to convert to milliseconds
             };
         }
@@ -177,9 +181,9 @@ function onWeaponBtnClick() {
                 startButton.style.display = 'none';
             }, 3500); // 3500 milliseconds = 3.5 seconds
         }
-
+        move.textContent = "Make a move!"
         isWeaponClickDisabled = false
-    }, 3000); // 3000 milliseconds = 3 seconds 
+    }, 1500); // 3000 milliseconds = 3 seconds 
 }
 
 // Get restart button
@@ -216,6 +220,25 @@ function resetGame() {
     resultElement.style.display = 'none';
 }
 
+let muteButton = document.querySelector('#mute');
+let isMuted = false;
+
+function onMuteBtnClick() {
+    let icon = muteButton.querySelector('i')
+    if (isMuted) {
+        gameMusic.volume= 0.2;
+        isMuted = false;
+        icon.classList.remove('fa-volume-mute');
+        icon.classList.add('fa-volume-up');
+        
+    } else {
+        gameMusic.volume = 0;
+        isMuted = true;
+        icon.classList.remove('fa-volume-up');
+        icon.classList.add('fa-volume-mute');
+    }
+}
+
 function initEventListeners() {
     // Add a click event listener to the start button
     startButton.addEventListener('click', onStartBtnClick);    
@@ -225,8 +248,14 @@ function initEventListeners() {
 
     // Add a click event listener to each button
     buttons.forEach(button => {
-        button.addEventListener('click', onWeaponBtnClick); 
+        if (button.id !== 'mute') {
+            button.addEventListener('click', onWeaponBtnClick);
+        }
     });
+
+    muteButton.addEventListener('click', onMuteBtnClick);
 }
 
 initEventListeners();
+
+
