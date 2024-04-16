@@ -46,7 +46,7 @@ h1:hover{
 }
 .titleBackground{
     background-color: gray;
-    width: 20%;
+    width: fit-content;
     margin: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -566,4 +566,8 @@ table tr td:nth-child(3) {
 
 .dropdown:active .dropdown-content {
     display: block;
+}
+
+#loginregister, #dropdown {
+    display: none;
 }
