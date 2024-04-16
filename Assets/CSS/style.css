@@ -533,10 +533,16 @@ table tr td:nth-child(3) {
     animation: fade 1s ease-in-out 3;
 }
 
+.dropdown {
+    position: relative;
+    display: none;
+    background-color: gray;
+    border-radius: 10px;
+}
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: gray; /* Change this to the background color of your main menu */
+    background-color: gray; 
     min-width: 120px;
     border-radius: 10px;
     z-index: 0;
@@ -550,7 +556,7 @@ table tr td:nth-child(3) {
     font-size: 20px; 
     font-weight: bold; 
     cursor: pointer; 
-    background-color: gray; /* Change this to the background color of your main menu items */
+    background-color: gray;
 }
 
 .dropdown:active {
