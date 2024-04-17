@@ -3,6 +3,7 @@
 <head>
     <title>GestureGalaxy</title>
     <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -11,14 +12,23 @@
                 <h1><a href="./index.html">GestureGalaxy</a></h1>
             </div>
         </div>
-        <nav>  
+        <nav id="myNav">  
             <div class="mainmenu">
                 <a href="./index.html">Home</a>
                 <a href="./play.html">Play</a>
                 <a href="./leaderboards.html">Leaderboards</a>
                 <a href="./gamerules.html">Game Rules</a>
             </div>
+            <a href="#" id="navIcon">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
+        <div id="dropdownContent">
+            <a href="./index.html">Home</a>
+            <a href="./play.html">Play</a>
+            <a href="./leaderboards.html">Leaderboards</a>
+            <a href="./gamerules.html">Game Rules</a>
+        </div>
     </header>
    
     <div class="content">
@@ -27,8 +37,9 @@
         <img src="assets\screenshots\ruleset.png" alt="Game Rules" id="ruleset">
     </div>
     
-    <footer id="footer">
+    <footer>
         <p>Created by: Linus</p>
     </footer>
+    <script src="./assets/scripts/script.js"></script>
 </body>
 </html>

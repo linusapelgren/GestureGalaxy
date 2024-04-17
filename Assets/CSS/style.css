@@ -13,6 +13,7 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 h1{
     font-size: 30px;
@@ -116,10 +117,27 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: fit-content;
     background-color: rgba(0, 0, 0, 0.3);
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #00FF00;
+    font-weight: bold;
+}
+
+.content .siteInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    padding: 20px;
     border: 1px solid transparent;
     border-radius: 10px;
     font-size: 20px;
@@ -132,10 +150,10 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: fit-content;
     background-color: rgba(0, 0, 0, 0.3);
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid transparent;
     border-radius: 10px;
     font-size: xxx-large;
@@ -562,35 +580,54 @@ table tr td:nth-child(3) {
     animation: blink 1.5s linear infinite;
 }
 
-
-
-/* Show the navigation links in a vertical stack when the hamburger icon is clicked */
-nav.responsive a:not(.icon) {
+nav{
+    position: relative;
+}
+#dropdownContent {
     display: block;
-    text-align: left;  /* Align the links to the left */
+    position: absolute;
+    background-color: #444444;
+    z-index: 100;
+    width: 100%;
+    top: 100%; 
+    left: 0;
+    max-height: 0; 
+    transition: max-height 0.5s ease-in-out; 
+    overflow: hidden;
 }
 
-/* Style the hamburger icon */
-nav .icon {
-    display: none;  /* Hide the icon by default */
+#dropdownContent a {
     color: #00FF00;
-    font-size: x-large;
-    cursor: pointer;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
 }
 
+#navIcon{
+    display: none;
+}
 /* Show the hamburger icon on small screens */
 @media screen and (max-width: 480px) {
-    nav a:not(.icon) {
+    .mainmenu{
         display: none;  /* Hide the links */
     }
-    nav .icon {
-        display: block;  /* Show the icon */  
+    #navIcon{
+        display: block;
+        font-size: 20px;
+        color: #00FF00;
+        cursor: pointer;
     }
-
+    #dropdownContent.active {
+        display: block;
+        max-height: 500px;
+    }
     .titleBackground {
         padding: 0px 10px; 
-        width: 25; 
-        margin-left: 20%;
+        width: fit-content; 
+        position: relative;
+        left: 40%;
+        transform: translateX(-40%);
     }
     .titleBackground h1 {
         font-size: 20px;
@@ -620,5 +657,21 @@ nav .icon {
     .moveList button {
         padding: 2px;
         font-size: 15px;
+    }
+    .content h2 {
+        font-size: 30px;
+        padding: 10px;
+        width: fit-content;
+    }
+
+    .content .info {
+        font-size: 15px;
+        padding: 5px;
+        width: 80%;
+    }
+    .content #start {
+        font-size: 10px;
+        padding: 10px;
+        width: 70%;
     }
 }
