@@ -273,10 +273,15 @@ function onRestart() {
     // Hide the start screen and show the game screen
     startScreen.style.display = 'none';
     gameScreen.style.display = 'block';
+
+    if (!isMuted) {
     gameMusic.loop = true;
     gameMusic.currentTime = 0;
     gameMusic.play();
-    gameMusic.volume = 0.5;
+    gameMusic.volume = 0.2;
+    } else {
+        gameMusic.volume = 0;
+    }
     restartButton.style.display = 'none';
     // Reset the game
     resetGame();
@@ -304,7 +309,6 @@ function onMuteBtnClick() {
         isMuted = false;
         icon.classList.remove('fa-volume-mute');
         icon.classList.add('fa-volume-up');
-        localStorage.setItem('!isMuted', !isMuted);
     } else {
         gameMusic.volume = 0;
         roundWin.volume = 0;
@@ -312,9 +316,9 @@ function onMuteBtnClick() {
         isMuted = true;
         icon.classList.remove('fa-volume-up');
         icon.classList.add('fa-volume-mute');
-        localStorage.setItem('isMuted', isMuted);
     }
 }
+
 
 //Event listeners
 
