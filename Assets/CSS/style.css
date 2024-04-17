@@ -561,3 +561,64 @@ table tr td:nth-child(3) {
     font-size: x-large;
     animation: blink 1.5s linear infinite;
 }
+
+
+
+/* Show the navigation links in a vertical stack when the hamburger icon is clicked */
+nav.responsive a:not(.icon) {
+    display: block;
+    text-align: left;  /* Align the links to the left */
+}
+
+/* Style the hamburger icon */
+nav .icon {
+    display: none;  /* Hide the icon by default */
+    color: #00FF00;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+/* Show the hamburger icon on small screens */
+@media screen and (max-width: 480px) {
+    nav a:not(.icon) {
+        display: none;  /* Hide the links */
+    }
+    nav .icon {
+        display: block;  /* Show the icon */  
+    }
+
+    .titleBackground {
+        padding: 0px 10px; 
+        width: 25; 
+        margin-left: 20%;
+    }
+    .titleBackground h1 {
+        font-size: 20px;
+    }
+    header {
+        padding: 10px;
+        display: flex; 
+        justify-content: left; 
+        align-items: center; 
+        flex-direction: row-reverse;
+    }
+
+    .gameWindowBorder {
+        width: 70%;
+        height: 40vh;
+    }
+
+    .moveList{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 5px 10px;
+    }
+    
+    .moveList button {
+        padding: 2px;
+        font-size: 15px;
+    }
+}
