@@ -46,7 +46,8 @@ let emptyHandImg =  document.querySelector('.emptyHandImg');
 let muteButton = document.querySelector('#mute');
 let isMuted = false;
 let roundWin = new Audio('./assets/Sound/roundWin.mp3');
-
+let arcadeName = document.querySelector('#arcadeName');
+let inputName = document.querySelector('#inputName');
 //Functions
 
 // Function to handle the start button click event
@@ -157,88 +158,75 @@ function onWeaponBtnClick() {
             playerHandImg.classList.add('fade');
             opponentHandImg.classList.add('fade');
         
-            resultElement.style.display = 'none'; // Hide the result element
-            
-            let playerChoice = this.id.toLowerCase(); // The id of the button is the player's choice
-        
-            // Delay the execution of the move by 3 seconds
-            setTimeout(function() {
-                // Remove the fade animation from the images
-                playerHandImg.classList.remove('fade');
-                opponentHandImg.classList.remove('fade');
-        
-                // Play the game
-                let computerChoice = getComputerChoice();
-                let {playerWon, message} = getWinner(playerChoice, computerChoice);
-        
-                // Update the scores in localStorage
-                localStorage.setItem('scores', JSON.stringify(scores));
-        
-                console.log(`Player chose ${playerChoice}`);
-                console.log(`Computer chose ${computerChoice}`);
-                console.log(message);
-        
-                // Set the src attribute of the img elements
-                playerHandImg.src = "./assets/screenshots/moves/" + playerChoice + ".png";
-                opponentHandImg.src = "./assets/screenshots/moves/" + computerChoice + ".png";
-        
-                // Display the result in the middle of the screen
-                resultElement.textContent = message;
-                resultElement.style.display = 'block';
-        
-                // Update the scoreboard
-                scoreboard.player.textContent = "Player: " + scores.player;
-                scoreboard.computer.textContent = "Computer: " + scores.computer;
+                resultElement.style.display = 'none'; // Hide the result element
                 
-                // Play the round win sound if the player or the computer wins the round
-                roundWin.volume = 0.5;
-                if ((playerWon && scores.player < 3) || (!playerWon && scores.computer < 3)) {
-                    gameMusic.volume = 0.1; // Lower the volume of the game music;
-                    roundWin.play();
-        
-                    // Resume the game music when the round win sound has finished playing
-                    roundWin.onloadedmetadata = function() {
-                        setTimeout(function() {
-                            gameMusic.volume = 0.2; // Reset the volume of the game music
-                        }, roundWin.duration * 1000); // roundWin.duration is in seconds, so multiply by 1000 to convert to milliseconds
-                    };
-                }
-                // Check if the game is over
-                if (scores.player === 3 || scores.computer === 3) {
-                    // Pause the game music
-                    gameMusic.pause();
-                    winSound.volume = 0.5;
-                    winSound.play();
-        
-                    // Update the result to show who won the game
-                    if (scores.player === 3) {
-                        resultElement.textContent = 'Player wins the game!';
-                    } else {
-                        resultElement.textContent = 'Computer wins the game!';
+                let playerChoice = this.id.toLowerCase(); // The id of the button is the player's choice
+            
+                // Delay the execution of the move by 3 seconds
+                setTimeout(function() {
+                    // Remove the fade animation from the images
+                    playerHandImg.classList.remove('fade');
+                    opponentHandImg.classList.remove('fade');
+            
+                    // Play the game
+                    let computerChoice = getComputerChoice();
+                    let {playerWon, message} = getWinner(playerChoice, computerChoice);
+            
+                    // Update the scores in localStorage
+                    localStorage.setItem('scores', JSON.stringify(scores));
+            
+                    console.log(`Player chose ${playerChoice}`);
+                    console.log(`Computer chose ${computerChoice}`);
+                    console.log(message);
+            
+                    // Set the src attribute of the img elements
+                    playerHandImg.src = "./assets/screenshots/moves/" + playerChoice + ".png";
+                    opponentHandImg.src = "./assets/screenshots/moves/" + computerChoice + ".png";
+            
+                    // Display the result in the middle of the screen
+                    resultElement.textContent = message;
+                    resultElement.style.display = 'block';
+            
+                    // Update the scoreboard
+                    scoreboard.player.textContent = "Player: " + scores.player;
+                    scoreboard.computer.textContent = "Computer: " + scores.computer;
+                    
+                    // Play the round win sound if the player or the computer wins the round
+                    roundWin.volume = 0.5;
+                    if ((playerWon && scores.player < 3) || (!playerWon && scores.computer < 3)) {
+                        gameMusic.volume = 0.1; // Lower the volume of the game music;
+                        roundWin.play();
+            
+                        // Resume the game music when the round win sound has finished playing
+                        roundWin.onloadedmetadata = function() {
+                            setTimeout(function() {
+                                gameMusic.volume = 0.2; // Reset the volume of the game music
+                            }, roundWin.duration * 1000); // roundWin.duration is in seconds, so multiply by 1000 to convert to milliseconds
+                        };
                     }
-        
-                    // Clear the game screen and show the start screen after a delay
-                    setTimeout(function() {
-                        // Hide the gameWindow div
-                        gameScreen.style.display = 'none';
-        
-                        // Show the startGameWindow and the restart button
-                        startScreen.style.display = 'block';
-                        restartButton.style.display = 'block';
-        
-                        // Hide the startButton
-                        startButton.style.display = 'none';
-                    }, 3500); // 3500 milliseconds = 3.5 seconds
-                }
-                move.textContent = "Make a move!"
-                isWeaponClickDisabled = false
-            }, 1500); // 3000 milliseconds = 3 seconds 
-        }
-        // Check if the game is over
-        if (scores.player === 3 || scores.computer === 3) {
-            // Pause the game music
-            gameMusic.pause();
-            winSound.play();
+                    // Check if the game is over
+                    if (scores.player === 3 || scores.computer === 3) {
+                        // Pause the game music
+                        gameMusic.pause();
+                        winSound.volume = 0.5;
+                        winSound.play();
+            
+                        // Update the result to show who won the game
+                        if (scores.player === 3) {
+                            resultElement.textContent = 'Player wins the game!';
+                        } else {
+                            resultElement.textContent = 'Computer wins the game!';
+                        }
+                    }
+                    move.textContent = "Make a move!";
+                    isWeaponClickDisabled = false;
+                }, 1500); // 1500 milliseconds = 1.5 seconds;
+            }
+            // Check if the game is over
+            if (scores.player === 1 || scores.computer === 1) {
+                // Pause the game music
+                gameMusic.pause();
+                winSound.play();
 
             // Update the result to show who won the game
             if (scores.player === 3) {
@@ -251,17 +239,33 @@ function onWeaponBtnClick() {
             setTimeout(function() {
                 // Hide the gameWindow div
                 gameScreen.style.display = 'none';
-
                 // Show the startGameWindow and the restart button
                 startScreen.style.display = 'block';
-                restartButton.style.display = 'block';
-
+                
                 // Hide the startButton
                 startButton.style.display = 'none';
+
+                if (playerWon) {
+                    // Show the player wins message
+                    arcadeName.style.display = 'block';
+                    inputName.style.display = 'block';
+                } else {
+                    restartButton.style.display = 'block';
+                }
+
+                arcadeName.oninput = function() {
+                    if (arcadeName.value.length === 3) {
+                        setTimeout(function() {
+                            arcadeName.style.display = 'none';
+                            inputName.style.display = 'none';
+                            restartButton.style.display = 'block';
+                        }, 1000); // 1000 milliseconds = 1 second
+                    }
+                };
             }, 3500); // 3500 milliseconds = 3.5 seconds
         }
-        move.textContent = "Make a move!"
-        isWeaponClickDisabled = false
+        move.textContent = "Make a move!";
+        isWeaponClickDisabled = false;
     }, 1500); // 3000 milliseconds = 3 seconds 
 }
 //Function to handle the restart button click event
@@ -300,6 +304,7 @@ function onMuteBtnClick() {
         isMuted = false;
         icon.classList.remove('fa-volume-mute');
         icon.classList.add('fa-volume-up');
+        localStorage.setItem('!isMuted', !isMuted);
     } else {
         gameMusic.volume = 0;
         roundWin.volume = 0;
@@ -307,6 +312,7 @@ function onMuteBtnClick() {
         isMuted = true;
         icon.classList.remove('fa-volume-up');
         icon.classList.add('fa-volume-mute');
+        localStorage.setItem('isMuted', isMuted);
     }
 }
 

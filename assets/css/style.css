@@ -537,3 +537,27 @@ table tr td:nth-child(3) {
     width: 40%;
     height: auto;
 }
+
+#arcadeName {
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: lightgreen;
+    background-color: #00FF00;
+    display: none;
+    border: none;
+}
+
+
+#inputName{
+    display: none;
+    position: absolute; 
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -30%); 
+    color: lightgreen;
+    font-weight: bold;
+    font-size: x-large;
+    animation: blink 1.5s linear infinite;
+}
