@@ -1,8 +1,11 @@
-body{
+/* Set the styles for the body */
+body {
     margin: 0;
     padding: 0;
     background-color: gray;
 }
+
+/* Set the styles for the header */
 header {
     padding: 0px;
     text-align: center;
@@ -15,6 +18,7 @@ header {
     flex-direction: column;
     position: relative;
 }
+/* Set the styles for the title */
 h1{
     font-size: 50px;
     background-color: #00FF00;
@@ -36,10 +40,11 @@ h1{
     background-clip: text;
     transition: 1.2s;
 }
+/*Hover effect for the title*/
 h1:hover{
     background-position: -120% 0;
 }
-
+/* Set the styles for the navigation */
 nav{
     display: flex;
     justify-content: center;
@@ -49,6 +54,7 @@ nav{
     text-align: center;
     padding: 0px;
 }
+/* Set the styles for the main menu*/
 .mainmenu {
     list-style-type: none;
     margin: 0;
@@ -64,7 +70,7 @@ nav{
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2); 
     gap: 20px;
 }
-
+/* Set the styles for the main menu items */
 .mainmenu a {
     text-decoration: none;
     color: #00FF00;
@@ -77,10 +83,12 @@ nav{
     background-color: rgb(134, 129, 129);
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1); 
 }
+/* Set the styles for the main menu items when clicked */
 .mainmenu a:active {
     box-shadow: none;
     transform: translateY(4px);
 }
+/* Set the styles for the footer */
 footer {
     padding: 10px;
     background-color: #444444;
@@ -92,8 +100,21 @@ footer {
     display: flex;
     justify-content: left;
 }
-
-
+/* Set the styles for the footer */
+#footer{
+    padding: 10px;
+    background-color: #444444;
+    color: #00FF00;
+    width: 100%;
+    box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: left;
+    position: relative;
+    bottom: 0;
+    transform: translateY(100%);
+    margin-top: 20px;
+}
+/* Set the styles for the content */
 .content {
     display: flex;
     justify-content: center;
@@ -103,7 +124,7 @@ footer {
     background-color: transparent;
     overflow-y: auto;
 }
-
+/* Set the styles for info */
 .content .info {
     display: flex;
     justify-content: center;
@@ -119,7 +140,7 @@ footer {
     color: #00FF00;
     font-weight: bold;
 }
-
+/* Set the styles for site info */
 .content .siteInfo {
     display: flex;
     justify-content: center;
@@ -136,7 +157,7 @@ footer {
     color: #00FF00;
     font-weight: bold;
 }
-
+/* Set the styles for the press to start button */
 .content h2 {
     display: flex;
     justify-content: center;
@@ -153,6 +174,7 @@ footer {
     font-weight: bold;
 }
 
+/* Set the styles for the start button */
 #start{
     display: flex;
     justify-content: center;
@@ -165,6 +187,7 @@ footer {
     border: 1px solid transparent;
     border-radius: 10px;
 }
+/* Set the styles for the start button when hovered */
 .start{
     font-size: xxx-large;
     background-color: #00FF00;
@@ -184,9 +207,11 @@ footer {
     background-clip: text;
     transition: 1.2s;
 }
+/* Set the styles for the start button when hovered */
 .start:hover{
     background-position: -120% 0;
 }
+/* Set the styles for the login page */
 .loginPage{
     background-color: lightgray;
     width: 40%;
@@ -195,47 +220,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.5);
 }
-
-#loginForm{
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    flex-direction: column;
-    font-weight: bold;
-    font-size: 20px;
-    width: 100%;
-    margin: auto;
-}
-#registerForm{
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    flex-direction: row;
-    font-weight: bold;
-    font-size: 20px;
-    width: 100%;
-    margin: auto;
-}
-
-label{
-    display: block;
-}
-input{
-    width: 50%;
-}
-
-.btnContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 25px;
-    gap: 10px;
-}
-
+/* Set the styles for the gameWindowBorder */
 .gameWindowBorder{
     background-color: gray;
     width: 60%;
@@ -248,7 +233,7 @@ input{
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
-
+/* Set the styles for the playerHandImg */
 .playerHandImg{
     z-index: 0;
     border: black 2px solid;
@@ -260,6 +245,7 @@ input{
     position: absolute;
     right: 0;
 }
+/* Set the styles for the opponentHandImg */
 .opponentHandImg{
     z-index: 0;
     border: black 2px solid;
@@ -269,12 +255,14 @@ input{
     padding-bottom: 20px;
     background-color: white;
 }
+/* Set the styles for img */
 img{
     width: 100px;
     height: 120px;
     margin: 10px;
     cursor: pointer;
 }
+/* Set the styles for the gamePage */
 #gamePage{
     display: flex;
     justify-content: center;
@@ -283,7 +271,7 @@ img{
     height: calc(100vh -40px);
     z-index: 0;
 }
-
+/* Set the styles for the gameWindow */
 .gameWindow{
     width:95%;
     height: 90%;
@@ -295,6 +283,7 @@ img{
     align-items: center;
     position: relative;
 }
+/* Set the styles for the gameWindow*/
 .gameWindow::after{
     content: "";
     position: absolute;
@@ -303,9 +292,10 @@ img{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 255, 0, 0.5); /* Semi-transparent green */
+    background-color: rgba(0, 255, 0, 0.5);
     z-index: 2;
 }
+/* Set the styles for the startGameWindow */
 .startGameWindow{
     background-color: rgba(0, 255, 0, 0.5);
     width:95%;
@@ -318,19 +308,7 @@ img{
     align-items: center;
     position: relative;
 }
-#footer{
-    padding: 10px;
-    background-color: #444444;
-    color: #00FF00;
-    width: 100%;
-    box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: left;
-    position: relative;
-    bottom: 0;
-    margin-top: 20px;
-}
-
+/* Set the styles for the screenOverlay */
 .screenOverlay{
     z-index: 2;
     width:100%;
@@ -343,6 +321,7 @@ img{
     align-items: center;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2); 
 }
+/* Set the styles for the startScreenOverlay */
 .startScreenOverlay{
     z-index: 5;
     width:100%;
@@ -354,6 +333,7 @@ img{
     align-items: center;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2); 
 }
+/* Set the styles for the startGame */
 .startScreenOverlay  #startGame{
     background-color: transparent; 
     color: lightgreen;
@@ -366,11 +346,13 @@ img{
     animation: blink 1.5s linear infinite;
     z-index: 100;
 }
+/*Blinking animation for the startGame and restartGame buttons*/
 @keyframes blink {
     0% {opacity: 1;}
     50% {opacity: 0;}
     100% {opacity: 1;}
 }
+/* Set the styles for the moveList */
 .moveList{
     background-color: rgb(134, 129, 129);
     margin: 20px;
@@ -383,9 +365,7 @@ img{
     gap: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
-
-
-
+/* Set the styles for the moveList buttons */
 .moveList button{
     background-color: gray;
     color: #00FF00;
@@ -396,11 +376,13 @@ img{
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
+/* Set the styles for the moveList buttons when clicked */
 .moveList button:active{
     box-shadow: none;
     transform: translateY(4px);
 }
 
+/* Set the styles for leaderboard */
 #Leaderboard{
     background-color: transparent;
     font-size: 30px;
@@ -410,8 +392,7 @@ img{
     color: #00FF00;
     text-decoration: underline;
 }
-
-
+/* Set the styles for the leaderboardsTable */
 .leaderboardsTable{
     background-color: darkgray;
     width: 95%;
@@ -423,6 +404,7 @@ img{
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
+/* Set the styles for the leaderboardsBackground */
 .leaderboardsBackground{
     background-color: gray;
     width: 80%;
@@ -436,7 +418,7 @@ img{
     z-index: -1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
-
+/* Set the styles for the leaderboards table */
 table{
     width: 100%;
     border-collapse: collapse;
@@ -447,19 +429,22 @@ table{
     font-weight: bold;
     font-size: 20px;
 }
+/* Set the styles for th */
 th{
     text-decoration: underline;
     padding-bottom: 10px;
 }
+/* Set the styles for tr */
 tr{
     border-bottom: 1px solid #00FF00;
     padding: 10px;
 }
-
+/* Set the styles for the second and third child of td */
 table tr td:nth-child(2),
 table tr td:nth-child(3) {
     text-align: center;
 }
+/* Set the styles for the Make a move! text*/
 #move{
     font-size: 20px;
     font-weight: bold;
@@ -469,8 +454,7 @@ table tr td:nth-child(3) {
     left: 50%;
     transform: translateX(-50%);
 }
-
-
+/* Set the styles for the top container */
 .screenOverlay #topContainer{
     display: flex;
     flex-direction: column;
@@ -479,13 +463,13 @@ table tr td:nth-child(3) {
     top: 0;
     width: 100%;
 }
-
+/*Set the styles for the top container span*/
 #topContainer span{
     font-size: 20px;
     font-weight: bold;
     color: #00FF00;
 }
-
+/* Set the styles for the scoreboard */
 #topContainer #scoreboard{
     display: flex;
     justify-content: space-between;
@@ -494,11 +478,12 @@ table tr td:nth-child(3) {
     padding: 10px 0;
     flex-direction: row-reverse;
 }
-
+/* Set the styles for the playerScore and opponentScore */
 #playerScore, #opponentScore{
     font-size: x-large;
     margin: 10px;
 }
+/* Set the styles for the result */
 #result {
     position: absolute;
     top: 20%;
@@ -509,7 +494,7 @@ table tr td:nth-child(3) {
     color: #00FF00;
     text-align: center;
 }
-
+/* Set the styles for the restartGame button */
 #restartGame{
     display: none;
     position: absolute; 
@@ -527,27 +512,26 @@ table tr td:nth-child(3) {
     animation: blink 1.5s linear infinite;
     z-index: 100;
 }
-
+/* Fading animation for hands */
 @keyframes fade {
     0% { opacity: 1; }
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
-
+/* Fading animation for hands */
 .fade {
     animation: fade 0.5s ease-in-out 3;
 }
-
+/* Set the styles for the mute button */
 #mute{
     color: #00FF00;
 }
-
-
+/* Set the styles for the ruleset */
 #ruleset{
     width: 40%;
     height: auto;
 }
-
+/* Arcade Name */
 #arcadeName {
     font-family: 'Press Start 2P', cursive; 
     font-size: 2em;
@@ -559,7 +543,7 @@ table tr td:nth-child(3) {
     border: none;
 }
 
-
+/* Input Name */
 #inputName{
     display: none;
     position: absolute; 
@@ -572,9 +556,12 @@ table tr td:nth-child(3) {
     animation: blink 1.5s linear infinite;
 }
 
+/* Dropdown Button */
 nav{
     position: relative;
 }
+
+/* Dropdown Content*/
 #dropdownContent {
     display: block;
     position: absolute;
@@ -588,6 +575,7 @@ nav{
     overflow: hidden;
 }
 
+/* Dropdown Content (Hidden by Default) */
 #dropdownContent a {
     color: #00FF00;
     padding: 12px 16px;
@@ -595,14 +583,14 @@ nav{
     display: flex;
     flex-direction: row;
 }
-
+/*Hiding the navIcon*/
 #navIcon{
     display: none;
 }
-/* Show the hamburger icon on small screens */
+/* Styling for small screens*/
 @media screen and (max-width: 480px) {
     .mainmenu{
-        display: none;  /* Hide the links */
+        display: none;
     }
     #navIcon{
         display: block;
@@ -665,5 +653,8 @@ nav{
         font-size: 10px;
         padding: 10px;
         width: 70%;
+    }
+    #ruleset{
+        width: 80%;
     }
 }

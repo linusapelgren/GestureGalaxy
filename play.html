@@ -2,31 +2,37 @@
 <html>
 <head>
     <title>GestureGalaxy</title>
+    <!-- CSS and Styling -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/icon/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="titleBackground">
             <div class="title">
+                <!-- Title of the website -->
                 <h1><a href="./index.html">GestureGalaxy</a></h1>
             </div>
         </div>
         <nav id="myNav">  
             <div class="mainmenu">
+                <!-- Navigation links -->
                 <a href="./index.html">Home</a>
                 <a href="./play.html">Play</a>
                 <a href="./leaderboards.html">Leaderboards</a>
                 <a href="./gamerules.html">Game Rules</a>
             </div>
+            <!-- Navigation icon for mobile view -->
             <a href="#" id="navIcon">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
         <div id="dropdownContent">
+            <!-- Dropdown navigation links -->
             <a href="./index.html">Home</a>
             <a href="./play.html">Play</a>
             <a href="./leaderboards.html">Leaderboards</a>
@@ -37,9 +43,13 @@
         <div class="gameWindowBorder">
             <div class="startGameWindow">
                 <div class="startScreenOverlay">
+                    <!-- Button to start the game -->
                     <button id="startGame">Press to start!</button>
+                    <!-- Button to restart the game -->
                     <button id="restartGame">Play Again?</button>
+                    <!-- Text prompting the user to input their name -->
                     <p id="inputName">Input name:</p>
+                    <!-- Input field for the user's name -->
                     <input type="text" id="arcadeName" name="arcadeName" maxlength="3" required>
                 </div>
             </div>
@@ -47,29 +57,34 @@
                 <div class="screenOverlay">
                     <div id="topContainer">
                         <span id="scoreboard">
+                            <!-- Scoreboard displaying player and computer scores -->
                             <span id="playerScore">Player: 0</span>
                             <span id="opponentScore">Computer: 0</span>
                         </span>
+                        <!-- Text prompting the user to make a move -->
                         <p id="move">Make a move!</p>
                     </div>
-                    <div class="opponentHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div>
-                    <div class="playerHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div>
+                    <div class="opponentHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div> <!-- Image of the opponent's hand -->
+                    <div class="playerHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div> <!-- Image of the player's hand -->
                 </div>
             </div>
         </div>
-        
         <span class="moveList">
+            <!-- Buttons for different moves -->
             <button id="Rock">Rock</button>
             <button id="Paper">Paper</button>
             <button id="Scissors">Scissors</button>
             <button id="Lizard">Lizard</button>
             <button id="Spock">Spock</button>
+            <!-- Button to mute/unmute the game sound -->
             <button id="mute"><i class="fas fa-volume-up"></i></button>
         </span>
     </div>
+    <!-- Footer -->
     <footer id="footer">
         <p>Created by: Linus</p>
     </footer>
+    <!-- JavaScript -->
     <script src="./assets/scripts/game.js"></script>
     <script src="./assets/scripts/script.js"></script>
 </body>
