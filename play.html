@@ -4,6 +4,7 @@
     <title>GestureGalaxy</title>
     <!-- CSS and Styling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Here is where you play the game">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +14,10 @@
 </head>
 <body>
     <header>
+        <div id="smallScreenMute">
+            <!-- Button to mute/unmute the game sound -->
+            <button id="mute"><i class="fas fa-volume-up"></i></button>
+        </div>
         <div class="titleBackground">
             <div class="title">
                 <!-- Title of the website -->
@@ -21,23 +26,16 @@
         </div>
         <nav id="myNav">  
             <div class="mainmenu">
-                <!-- Navigation links -->
                 <a href="./index.html">Home</a>
-                <a href="./play.html">Play</a>
-                <a href="./leaderboards.html">Leaderboards</a>
-                <a href="./gamerules.html">Game Rules</a>
+                <!-- Button to mute/unmute the game sound -->
+                <button id="mute"><i class="fas fa-volume-up"></i></button>
             </div>
-            <!-- Navigation icon for mobile view -->
             <a href="#" id="navIcon">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
         <div id="dropdownContent">
-            <!-- Dropdown navigation links -->
             <a href="./index.html">Home</a>
-            <a href="./play.html">Play</a>
-            <a href="./leaderboards.html">Leaderboards</a>
-            <a href="./gamerules.html">Game Rules</a>
         </div>
     </header>
     <div class="content" id="gamePage">
@@ -65,8 +63,8 @@
                         <!-- Text prompting the user to make a move -->
                         <p id="move">Make a move!</p>
                     </div>
-                    <div class="opponentHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div> <!-- Image of the opponent's hand -->
-                    <div class="playerHandImg"><img src="./Assets/Screenshots/Moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div> <!-- Image of the player's hand -->
+                    <div class="opponentHandImg"><img src="./assets/screenshots/moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div> <!-- Image of the opponent's hand -->
+                    <div class="playerHandImg"><img src="./assets/screenshots/moves/emptyhand.png" alt="Empty hand sign" class="emptyHandImg"></div> <!-- Image of the player's hand -->
                 </div>
             </div>
         </div>
@@ -77,12 +75,10 @@
             <button id="Scissors">Scissors</button>
             <button id="Lizard">Lizard</button>
             <button id="Spock">Spock</button>
-            <!-- Button to mute/unmute the game sound -->
-            <button id="mute"><i class="fas fa-volume-up"></i></button>
         </span>
     </div>
     <!-- Footer -->
-    <footer id="footer">
+    <footer>
         <p>Created by: Linus</p>
     </footer>
     <!-- JavaScript -->

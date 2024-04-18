@@ -22,7 +22,7 @@ const WEAPONS_CONFIG = {
         winsOver: ['rock', 'scissors']
     },
 };
-let isWeaponClickDisabled = false;
+let isWeaponClickDisabled = true;
 let startScreen = document.querySelector('.startGameWindow');
 let gameScreen = document.querySelector('.gameWindow');
 let gameMusic = new Audio('./assets/sound/GameMusic.mp3');
@@ -67,6 +67,7 @@ function onStartBtnClick() {
     gameMusic.loop = true;
     gameMusic.play();
     gameMusic.volume = 0.2;
+    isWeaponClickDisabled = false;
 }
 // Function to get the computer's choice
 function getComputerChoice() {

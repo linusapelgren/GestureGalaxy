@@ -90,30 +90,22 @@ nav{
 }
 /* Set the styles for the footer */
 footer {
-    padding: 10px;
-    background-color: #444444;
-    color: #00FF00;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: left;
-}
-/* Set the styles for the footer */
-#footer{
-    padding: 10px;
+    padding: 10px 0px;
     background-color: #444444;
     color: #00FF00;
     width: 100%;
     box-shadow: 0px -10px 15px -5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: left;
+    margin-top: 20px;
+    text-align: center;
     position: relative;
     bottom: 0;
-    transform: translateY(100%);
-    margin-top: 20px;
 }
+
+#footer_home {
+    position: fixed;
+    bottom: 0;
+}
+
 /* Set the styles for the content */
 .content {
     display: flex;
@@ -123,6 +115,7 @@ footer {
     margin-top: 20px;
     background-color: transparent;
     overflow-y: auto;
+    padding: 10px;
 }
 /* Set the styles for info */
 .content .info {
@@ -145,7 +138,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; 
     width: fit-content;
     max-width: 80%;
     background-color: rgba(0, 0, 0, 0.3);
@@ -157,7 +150,7 @@ footer {
     color: #00FF00;
     font-weight: bold;
 }
-/* Set the styles for the press to start button */
+/* Set the styles for the h2 */
 .content h2 {
     display: flex;
     justify-content: center;
@@ -268,7 +261,6 @@ img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh - 3.7vh);
     z-index: 0;
 }
 /* Set the styles for the gameWindow */
@@ -395,8 +387,9 @@ img{
 /* Set the styles for the leaderboardsTable */
 .leaderboardsTable{
     background-color: darkgray;
-    width: 95%;
+    width: 90%;
     height: 90%;
+    padding: 10px;
     border-radius: 10px;
     margin: 0;
     align-items: center;
@@ -407,8 +400,9 @@ img{
 /* Set the styles for the leaderboardsBackground */
 .leaderboardsBackground{
     background-color: gray;
-    width: 80%;
-    height: 80vh;
+    width: 90%;
+    height: 70vh;
+    overflow: auto;
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -524,7 +518,15 @@ table tr td:nth-child(3) {
 }
 /* Set the styles for the mute button */
 #mute{
+    margin: 5px;
+    background-color: gray;
     color: #00FF00;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 /* Set the styles for the ruleset */
 #ruleset{
@@ -587,6 +589,14 @@ nav{
 #navIcon{
     display: none;
 }
+
+#smallScreenMute{
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+
 /* Styling for small screens*/
 @media screen and (max-width: 480px) {
     .mainmenu{
@@ -597,17 +607,23 @@ nav{
         font-size: 20px;
         color: #00FF00;
         cursor: pointer;
+        background-color: gray;
+        margin: 5px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        padding: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     }
     #dropdownContent.active {
         display: block;
         max-height: 500px;
     }
     .titleBackground {
-        padding: 0px 10px; 
         width: fit-content; 
-        position: relative;
-        left: 40%;
-        transform: translateX(-40%);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .titleBackground h1 {
         font-size: 40px;
@@ -630,12 +646,12 @@ nav{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 5px 10px;
+        justify-content: space-evenly;
+        padding: 10px 10px;
     }
     
     .moveList button {
-        padding: 2px;
+        padding: 10px;
         font-size: 15px;
     }
     .content h2 {
@@ -656,5 +672,23 @@ nav{
     }
     #ruleset{
         width: 80%;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+    #smallScreenMute{
+        display: block;
+    }
+    .start{
+        font-size: xx-large;
+    }
+    .content h2{
+        text-align: center;
+        width: min-content;
+        padding: 5px 25px;
+    }
+    #footer_home{
+        position: unset;
     }
 }
