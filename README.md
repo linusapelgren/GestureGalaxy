@@ -1,19 +1,23 @@
 # GestureGalaxy
 This site aims to satisfy your cravings for arcade-style gaming while at home on your computer. The site provides the game rock-paper-scissors-lizard-Spock, which was popularized by the TV show 'The Big Bang Theory.
-![Landing page on different devices](./assets/screenshots/devices.PNG)
+
+<a href="https://linusapelgren.github.io/GestureGalaxy/">GitHub Pages Link</a>
+
+![Landing page on different devices](./assets/screenshots/devices.png)
+
 ## Table of contents <a name="toc"></a>
-- [Title](#title)
 - [Design](#design)
 - [Features](#features)
 - [Testing](#testing)
-- [Deployment](#deployment)
 - [Credits and Outside Sources](#credits)
 
-## Design
+## Design <a name="design"></a>
+
 ### Wireframes 
 After i hade come up with a design idea i started to draw some wireframes on how i wanted it to look
 #### Site Plan
 This is the initial site plan
+
 ![Initial site plan wireframe](./assets/screenshots/wireframes/sitemap.png)
 
 - I decided to not have a log in section because it didn´t make sense, since i couldnt store the accounts
@@ -50,8 +54,12 @@ This is the game rules page:
 
 ![Rule set picture](./assets/screenshots/ruleset.png)
 
-## Features 
+[return to Table of Contents](#toc)
+
+## Features <a name="features"></a>
+
 ### Existing Features
+
 #### Main menu
 The main menu contains all the links for the different pages on the site
 This is a picture of the main menu:
@@ -118,60 +126,136 @@ Picture of button when muted
 
 ##### Scoreboard
 The game keeps track of the player and computer scrores through a scoreboard.
-Picture of the scoreboard
-![Picture of scoreboard](assets/screenshots/features/scoreboard.PNG)
+Picture of the scoreboard:
+
+![Picture of scoreboard](assets/screenshots/features/scoreboard.png)
 
 ##### Result
 After each round the game tells you who won.
 Picture of player winning:
-![Picture of scoreboard](assets/screenshots/features/playerwins.PNG)
+
+![Picture of scoreboard](assets/screenshots/features/playerwins.png)
 
 Picture of computer winning:
-![Picture of scoreboard](assets/screenshots/features/computerwins.PNG)
+
+![Picture of scoreboard](assets/screenshots/features/computerwins.png)
 
 Picture of a tie:
-![Picture of scoreboard](assets/screenshots/features/tie.PNG)
+
+![Picture of scoreboard](assets/screenshots/features/tie.png)
 
 ##### Final result
 Whenever the player or computer reaches a score of 3 they get met with a screen that announces who won the game
 Picture of winning screen
-![Picture of winning screen](assets/screenshots/features/finalscreen.PNG)
+
+![Picture of winning screen](assets/screenshots/features/finalscreen.png)
 
 ##### Name input
 If the player won the entire game you get to input a three character long name that ends up on the leaderboard.
 I chose an arcade style font for this.
 Picture of the name input screen 
-![Picture of name input screen](assets/screenshots/features/entername.PNG)
+
+![Picture of name input screen](assets/screenshots/features/entername.png)
 
 Picture of font
-![Picture of font](assets/screenshots/features/font.PNG)
+
+![Picture of font](assets/screenshots/features/font.png)
 
 ##### Restart button
 After each game you get met with a screen that says play again?
 Picture of restart button:
-![Picture of restart screen](assets/screenshots/features/restart.PNG)
+
+![Picture of restart screen](assets/screenshots/features/restart.png)
 
 #### Leaderboard section
 The leaderboard is tied to the name you entered when winning the game. It keeps track of how many wins the name inputed has and each time they win it adds +1 to the score
-Picture of the leaderboard
-![Picture of leaderboard](assets/screenshots/features/leaderboard.PNG)
+Picture of the leaderboard:
+
+![Picture of leaderboard](assets/screenshots/features/leaderboard.png)
 
 ### Features Left to Implement
 - Difficulty scaling 
 - Online matches
-## Testing 
 
-### Lighthouse tool 
+[return to Table of Contents](#toc)
+
+# Testing <a name="testing"></a>
+
+## Manual testing
+I conducted a lot of tests during programming. I used a live preview to check if everything i programmed functioned as intended
+
+## Testing on different screen sizes
+I used my browser tools to check how the page looked on different devices
+
+### Landing page
+
+![Picture of leaderboard](assets/screenshots/landingpage_phone.PNG)
+
+### Play page
+
+![Picture of leaderboard](assets/screenshots/playpage_phone.PNG)
+
+### Leaderboards page
+
+![Picture of leaderboard](assets/screenshots/leaderboard_phone.PNG)
+
+### Game rules page
+
+![Picture of leaderboard](assets/screenshots/rules_phone.PNG)
+
+## Lighthouse tool 
 I used the Lighthouse chrome extension to test my website. My initial score was:
-![Picture of lighthouse tool test](./assets/screenshots/lighthouse.PNG)
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse.png)
+
 My poor SEO was due to missing a <meta name="viewport" content="width=device-width, initial-scale=1.0"> string in my code.
 After i added it my new score was
-![Picture of lighthouse tool test](./assets/screenshots/lighthousev2.PNG)
 
-### Validator Testing 
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthousev2.png)
+
+### Landing page 
+On desktop 
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_desktop_home.png)
+
+On phone
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_home_phone.png)
+
+### Play page
+On desktop 
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_desktop_play.png)
+
+On phone
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_phone_play.png)
+
+### Landing page 
+On desktop 
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_desktop_leaderboards.png)
+
+On phone
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_phone_leaderboards.png)
+
+### Rules page 
+On desktop 
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_desktop_rules.png)
+
+On phone
+
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse/lighthouse_phone_rules.png)
+
+## Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flinusapelgren.github.io%2FGestureGalaxy%2F)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flinusapelgren.github.io%2FGestureGalaxy%2Fplay.html)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flinusapelgren.github.io%2FGestureGalaxy%2Fleaderboards.html)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flinusapelgren.github.io%2FGestureGalaxy%2Fgamerules.html)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-linusapelgr-gesturegala-5xdeal090og.ws-eu110.gitpod.io%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
 
@@ -179,7 +263,7 @@ After i added it my new score was
   - No errors were found when passing through the official [JShint](https://jshint.com)
 
 
-### Unfixed Bugs
+## Unfixed Bugs
 - None
 
 ## Deployment
@@ -204,7 +288,7 @@ To deploy the project follow the following steps.
 [return to Table of Contents](#toc)
 
 
-## Credits and outside sources
+## Credits and outside sources <a name="credits"></a>
 
 ### Sound 
 - <a href="https://pixabay.com/sound-effects/search/ui/" target="_blank">Pixabay</a> 
@@ -223,7 +307,7 @@ To deploy the project follow the following steps.
 - <a href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" target="_blank">Fonts.googleapis</a>
 - <a href="https://miro.com/sv/">Miro board</a>
 
-
+[return to Table of Contents](#toc)
 
 
 

@@ -105,6 +105,10 @@ footer {
     position: fixed;
     bottom: 0;
 }
+#footer_leaderboard{
+    position: fixed;
+    bottom: 0;
+}
 
 /* Set the styles for the content */
 .content {
@@ -687,8 +691,5 @@ nav{
         text-align: center;
         width: min-content;
         padding: 5px 25px;
-    }
-    #footer_home{
-        position: unset;
     }
 }
