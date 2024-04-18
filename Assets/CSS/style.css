@@ -16,7 +16,7 @@ header {
     position: relative;
 }
 h1{
-    font-size: 30px;
+    font-size: 50px;
     background-color: #00FF00;
     font-weight: bolder;
     position: relative;
@@ -40,14 +40,6 @@ h1:hover{
     background-position: -120% 0;
 }
 
-.titleBackground{
-    background-color: gray;
-    width: fit-content;
-    margin: 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
-    padding: 0px 20px;
-}
 nav{
     display: flex;
     justify-content: center;
@@ -109,8 +101,8 @@ footer {
     flex-direction: column;
     margin-top: 20px;
     background-color: transparent;
+    overflow-y: auto;
 }
-
 
 .content .info {
     display: flex;
@@ -630,7 +622,7 @@ nav{
         transform: translateX(-40%);
     }
     .titleBackground h1 {
-        font-size: 20px;
+        font-size: 40px;
     }
     header {
         padding: 10px;
