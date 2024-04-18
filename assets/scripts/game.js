@@ -205,23 +205,30 @@ function onWeaponBtnClick() {
 
             // Play the round win sound if the player or the computer wins the round
             roundWin.volume = 0.5;
-            if ((playerWon && scores.player < 3) && playerChoice !== computerChoice || (!playerWon && scores.computer < 3  && playerChoice !== computerChoice)) {
-                gameMusic.volume = 0.1; // Lower the volume of the game music;
-                roundWin.load(); // Ensure the audio file is loaded
-                roundWin.play();
-                console.log('Round win sound played');
+            if (!isMuted) {
+                if ((playerWon && scores.player < 3) && playerChoice !== computerChoice || (!playerWon && scores.computer < 3  && playerChoice !== computerChoice)) {
+                    gameMusic.volume = 0.1; // Lower the volume of the game music;
+                    roundWin.load(); // Ensure the audio file is loaded
+                    roundWin.play();
+                    console.log('Round win sound played');
 
-                // Resume the game music when the round win sound has finished playing
-                roundWin.onended = function() {
-                    gameMusic.volume = 0.2; // Reset the volume of the game music
-                };
+                    // Resume the game music when the round win sound has finished playing
+                    roundWin.onended = function() {
+                        gameMusic.volume = 0.2; // Reset the volume of the game music
+                    };
+                }
+            } else {
+                gameMusic.volume = 0;
             }
-            // Check if the game is over
+            
+            // Check if the game is over    
             if (scores.player === 3 || scores.computer === 3) {
                 // Pause the game music
-                gameMusic.pause();
-                winSound.volume = 0.5;
-                winSound.play();
+                if (!isMuted) {
+                    gameMusic.pause();
+                    winSound.volume = 0.5;
+                    winSound.play();
+                } else { winSound.volume = 0;}
                 // Update the result to show who won the game
                 if (scores.player === 3) {
                     resultElement.textContent = 'Player wins the game!';

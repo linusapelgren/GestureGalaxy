@@ -1,8 +1,9 @@
+//Variables
 let navIcon = document.getElementById("navIcon");
 let dropdownContent = document.getElementById("dropdownContent");
 let icon = navIcon.children[0];
 navIcon.addEventListener("click", navMenuOpen);
-
+//Function to open and close the navigation menu
 function navMenuOpen() {
     dropdownContent.classList.toggle("active");
     if (icon.classList.contains("fa-bars")) {

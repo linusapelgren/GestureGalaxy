@@ -268,7 +268,7 @@ img{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh -40px);
+    height: calc(100vh - 3.7vh);
     z-index: 0;
 }
 /* Set the styles for the gameWindow */
@@ -427,7 +427,7 @@ table{
     padding: 5px;
     color: #00FF00;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
 }
 /* Set the styles for th */
 th{
@@ -448,7 +448,7 @@ table tr td:nth-child(3) {
 #move{
     font-size: 20px;
     font-weight: bold;
-    color: #00FF00;
+    color: lightgreen;
     position: absolute;
     top: 0;
     left: 50%;
@@ -467,7 +467,7 @@ table tr td:nth-child(3) {
 #topContainer span{
     font-size: 20px;
     font-weight: bold;
-    color: #00FF00;
+    color: lightgreen;
 }
 /* Set the styles for the scoreboard */
 #topContainer #scoreboard{
@@ -491,7 +491,7 @@ table tr td:nth-child(3) {
     transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: bold;
-    color: #00FF00;
+    color: lightgreen;
     text-align: center;
 }
 /* Set the styles for the restartGame button */
