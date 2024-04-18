@@ -128,6 +128,14 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
+### Lighthouse tool 
+I used the Lighthouse chrome extension to test my website. My initial score was:
+![Picture of lighthouse tool test](./assets/screenshots/lighthouse.PNG)
+My poor SEO was due to missing a <meta name="viewport" content="width=device-width, initial-scale=1.0"> string in my code.
+After i added it my new score was
+![Picture of lighthouse tool test](./assets/screenshots/lighthousev2.PNG)
+
+
 
 ### Validator Testing 
 
